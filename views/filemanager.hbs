@@ -1,0 +1,20 @@
+<div id="left_div">
+    <h1>filemanager</h1>
+    <a href="/reset">usuń dane o plikach z tablicy</a>
+</div>
+<div id="right_div">
+    <div id="right_div_filemanager">
+        <table>
+            <tr>
+                {{#each table_headers}}
+                {{> table_header}}
+                {{/each}}
+            </tr>
+            {{#each files}}
+            <tr>
+                {{> table_data}}
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</div>

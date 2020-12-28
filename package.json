@@ -1,0 +1,18 @@
+{
+  "name": "filemanager_projekt",
+  "version": "1.0.0",
+  "description": "projekt filemanagera",
+  "main": "server01.js",
+  "dependencies": {
+    "express-handlebars": "^5.2.0",
+    "formidable": "^1.2.2",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server01.js"
+  },
+  "author": "Paweł Mączałowski",
+  "license": "ISC"
+}
