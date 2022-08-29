@@ -3,6 +3,7 @@
 var express = require("express")
 var app = express()
 var PORT = process.env.PORT || 3000; // bardzo istotna linijka - port zostaje przydzielony przez Heroku
+var fs = require('fs');
 
 //funkcje na serwerze, obsługujące konkretne adresy
 // w przeglądarce
@@ -69,7 +70,9 @@ app.post('/handleUpload', function (req, res) {
                 path: element.path,
                 savedate: Date.now(),
             })
+            console.log(element.path)
         }
+
 
         if (files.imagetoupload == undefined) {
             // zabezpieczenie przed wysłaniem pustego formularza 
@@ -125,6 +128,7 @@ app.get("/reset", function (req, res) {
 
 app.get("/delete", function (req, res) {
     let result = context.files.filter(element => (element.id != parseInt(req.query.id)))
+    fs.unlink(context.files.find(element => (element.id == parseInt(req.query.id))).path, () => { })
     context.files = result
     res.redirect('/filemanager')
 })
