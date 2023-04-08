@@ -1,4 +1,5 @@
 # web-filemanager
 Projekt filemanager'a
-Poczatuj tutaj:
-https://irc-long-polling.onrender.com
+
+Demo:
+https://web-filemanager.onrender.com/
